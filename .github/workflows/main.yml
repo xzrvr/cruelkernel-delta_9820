@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: cruel
+  TOOLCHAIN: proton
   INSTALLER: yes
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        model: [ "G970F,G973F,G975F", "N975F" ]
+        model: [ "G970F" ]
 
     steps:
       - uses: actions/checkout@v3
@@ -54,10 +54,15 @@ jobs:
         run: |
           set -e -o pipefail
           ./cruelbuild config                    \
+                       os_patch_level=2023-09    \
                        model=${{ matrix.model }} \
-                       name="Cruel-devel"        \
+                       name="Cruel-v5.3_custom"  \
                        toolchain=$TOOLCHAIN      \
-                       +magisk                   \
+                       force_dex_wqhd
+                       io_maple
+                       tcp_westwood
+                       100hz
+                       +magisk=delta             \
                        +nohardening              \
                        +ttl                      \
                        +wireguard                \
