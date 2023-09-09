@@ -10,10 +10,10 @@ if [ "x$1" = "xcanary" ]
 then
 	nver="canary"
 	magisk_link="https://github.com/topjohnwu/magisk-files/raw/${nver}/app-debug.apk"
-elif [ "x$1" = "xalpha" ]
+elif [ "x$1" = "xdelta" ]  # Change "xalpha" to "xdelta" here
 then
-	nver="alpha"
-	magisk_link="https://github.com/vvb2060/magisk_files/raw/${nver}/app-release.apk"
+    	nver="delta"  # Change "alpha" to "delta" here
+    	magisk_link="https://raw.githubusercontent.com/HuskyDG/magisk-files/X/v26.1-delta.apk"  # Change the link here
 else
 	dash='-'
 	if [ "x$1" = "x" ]; then
