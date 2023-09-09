@@ -59,10 +59,10 @@ jobs:
                        name="Cruel-v5.3_custom"  \
                        toolchain=$TOOLCHAIN      \
                        +force_dex_wqhd           \
-                       +io_maple                  \
-                       +tcp_westwood              \
+                       +io_maple                 \
+                       +tcp_westwood             \
                        +100hz                    \
-                       +magisk                   \
+                       +magisk=delta             \
                        +nohardening              \
                        +ttl                      \
                        +wireguard                \
