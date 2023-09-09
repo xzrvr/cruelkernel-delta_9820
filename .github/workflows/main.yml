@@ -58,10 +58,10 @@ jobs:
                        model=${{ matrix.model }} \
                        name="Cruel-v5.3_custom"  \
                        toolchain=$TOOLCHAIN      \
-                       +force_dex_wqhd
-                       io_maple
-                       tcp_westwood
-                       +100hz
+                       +force_dex_wqhd           \
+                       io_maple                  \
+                       tcp_westwood              \
+                       +100hz                    \
                        +magisk                   \
                        +nohardening              \
                        +ttl                      \
