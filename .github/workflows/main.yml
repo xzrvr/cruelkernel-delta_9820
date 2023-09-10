@@ -54,7 +54,7 @@ jobs:
         run: |
           set -e -o pipefail
           ./cruelbuild config                    \
-                       os_patch_level=2023-09    \
+                       os_patch_level=2023-03    \
                        model=${{ matrix.model }} \
                        name="Cruel-v5.3_custom"  \
                        toolchain=$TOOLCHAIN      \
