@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: proton
+  TOOLCHAIN: system-clang
   INSTALLER: yes
 
 jobs:
@@ -56,11 +56,14 @@ jobs:
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
                        name="Cruel-devel"        \
+                       os_patch_level=2023-03    \
                        toolchain=$TOOLCHAIN      \
                        +nozram                   \
                        +noswap                   \
                        +fake_config              \
                        +usb_serial               \
+                       +nomodules                \
+                       +force_dex_wqhd           \
                        +noaudit                  \
                        +noksm                    \
                        +nodebug                  \
