@@ -55,9 +55,16 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="Cruel-devel"        \
+                       name="cruel-v5.3_custom"  \
                        os_patch_level=2023-03    \
                        toolchain=$TOOLCHAIN      \
+                       +dtb                      \
+                       +performance              \
+                       +io_fiops                 \
+                       +io_zen                   \
+                       +io_maple                 \
+                       +tcp_cubic                \
+                       +tcp_westwood             \
                        +nozram                   \
                        +noswap                   \
                        +fake_config              \
