@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: system-clang
+  TOOLCHAIN: cruel
   INSTALLER: yes
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        model: [ "G970F" ]
+        model: [ "G970F,G973F,G975F", "N975F" ]
 
     steps:
       - uses: actions/checkout@v3
@@ -55,25 +55,8 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="cruel-v5.3_custom"  \
+                       name="Cruel-devel"        \
                        toolchain=$TOOLCHAIN      \
-                       +dtb                      \
-                       +performance              \
-                       +io_fiops                 \
-                       +io_zen                   \
-                       +io_maple                 \
-                       +tcp_cubic                \
-                       +tcp_westwood             \
-                       +nozram                   \
-                       +noswap                   \
-                       +fake_config              \
-                       +usb_serial               \
-                       +nomodules                \
-                       +force_dex_wqhd           \
-                       +noaudit                  \
-                       +noksm                    \
-                       +nodebug                  \
-                       +mass_storage             \
                        +magisk=delta             \
                        +nohardening              \
                        +ttl                      \
