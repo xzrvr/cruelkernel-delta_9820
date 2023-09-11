@@ -56,7 +56,6 @@ jobs:
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
                        name="cruel-v5.3_custom"  \
-                       os_patch_level=2023-03    \
                        toolchain=$TOOLCHAIN      \
                        +dtb                      \
                        +performance              \
