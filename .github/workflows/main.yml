@@ -55,7 +55,7 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="cruel-HVJ5_v5.3-custom"  \
+                       name="cruel-HVJ5-v5.3_custom"  \
                        toolchain=$TOOLCHAIN      \
                        +magisk=delta             \
                        +nohardening              \
@@ -78,6 +78,8 @@ jobs:
                        +sched_ondemand           \
                        +sched_userspace          \
                        +usb_serial               \
+                       +mass_storage             \
+                       +300hz                    \
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu
