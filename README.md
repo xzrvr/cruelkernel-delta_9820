@@ -6,6 +6,9 @@ Based on samsung sources and android common tree.
 Supported devices: G970F/N, G973F/N, G975F/N G977B/N, N970F, N975F,
 N971N, N976B/N.
 
+I (xzrvr) have tested this config on an s10e (G970F/N)
+caution, no more magisk alpha only delta
+
 ## Contributors
 
 - fart1-git - for removing vendor check of DP cables in DEX mode
@@ -14,6 +17,7 @@ N971N, N976B/N.
 - thehacker911 - overall improvements and advices
 - @bamsbamx - ported boeffla\_wakelock\_blocker module
 - Nico (@NicoMax2012) - ported moro sound module
+- xzrvr - replaced magisk alpha with delta (this fork)
 
 ## How to install
 
@@ -161,7 +165,7 @@ Only the *.conf files prefixed with "cruel" are meaningful.
 Presets list (+ means enabled by default, use NODEFAULTS=1 env var to drop them):
 * +magisk - integrates magisk into the kernel. This allows to have root without
   booting from recovery. Enabled by default. It's possible to specify magisk version,
-  e.g. +magisk=canary or +magisk=alpha or +magisk=v20.4 or +magisk=v19.4
+  e.g. +magisk=canary or +magisk=delta or +magisk=v26.3 or +magisk=v19.4
 * dtb - build dtb/dtbo images
 * empty\_vbmeta - include empty vbmeta img in installer and flash it
 * always\_permit - pin SELinux to always use permissive mode. Required on LOS rom.
@@ -173,7 +177,7 @@ Presets list (+ means enabled by default, use NODEFAULTS=1 env var to drop them)
 * 300hz - increase interrupt clock freq from 250hz to 300hz.
 * 1000hz - increase interrupt clock freq from 250hz to 1000hz. Don't use it if you
   play games. You could benefit from this setting only if you use light/middle-weight
-  apps. Look here for more info: https://source.android.com/devices/tech/debug/jank\_jitter
+  apps. Look here for more info: https://source.android.com/devices/tech/debug/jank_jitter
 * fp\_boost - fingerprint boost, max freqs for faster fingerprint check.
 * noatime - mount fs with noatime by default.
 * simple\_lmk - use simple low memory killer instead of lmdk.
