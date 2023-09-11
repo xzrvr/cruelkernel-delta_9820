@@ -74,6 +74,7 @@ jobs:
                        +noaudit                  \
                        +noksm                    \
                        +nodebug                  \
+                       +mass_storage             \
                        +magisk=delta             \
                        +nohardening              \
                        +ttl                      \
