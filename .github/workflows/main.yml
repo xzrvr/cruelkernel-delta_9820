@@ -69,8 +69,14 @@ jobs:
                        +boeffla_wl_blocker       \
                        +dtb                      \
                        +performance              \
+                       +tcp_cubic                \
                        +tcp_westwood             \
+                       +io_fiops                 \
+                       +io_zen                   \
                        +io_maple                 \
+                       +sched_conservative       \
+                       +sched_ondemand           \
+                       +sched_userspace          \
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu
