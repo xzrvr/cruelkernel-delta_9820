@@ -65,7 +65,6 @@ jobs:
                        +sdfat                    \
                        +ntfs                     \
                        +force_dex_wqhd           \
-                       +morosound                \
                        +boeffla_wl_blocker       \
                        +dtb                      \
                        +performance              \
