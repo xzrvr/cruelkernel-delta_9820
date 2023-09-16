@@ -50,7 +50,7 @@ jobs:
             ccache-${{ env.TOOLCHAIN }}-${{ steps.ccache_model_key.outputs.KEY }}-
             ccache-${{ env.TOOLCHAIN }}-
 
-      - name: Kernel Configure
+      - name: Kernel Configuration
         run: |
           set -e -o pipefail
           ./cruelbuild config                    \
