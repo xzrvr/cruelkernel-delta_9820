@@ -57,7 +57,7 @@ jobs:
                        name="cruel-HVJ5-v5.3_custom"  \
                        toolchain=$TOOLCHAIN      \
                        +magisk=delta             \
-                       -nohardening              \
+                       +nohardening              \
                        +ttl                      \
                        +wireguard                \
                        +cifs                     \
