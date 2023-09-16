@@ -58,7 +58,6 @@ jobs:
                        name="cruel-HVJ5-v5.3_custom"  \
                        toolchain=$TOOLCHAIN      \
                        +magisk=delta             \
-                       -nohardening              \
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu
