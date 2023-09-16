@@ -58,6 +58,18 @@ jobs:
                        name="cruel-HVJ5-v5.3_custom"  \
                        toolchain=$TOOLCHAIN      \
                        +magisk=delta             \
+                       -wireguard  \
+                       -usb_serial  \
+                       -ttl  \
+                       -sdfat  \
+                       -ntfs  \
+                       -sched_powersave  \
+                       -sched_performance  \
+                       -nodebug  \
+                       -morosound  \
+                       -force_dex_wqhd  \
+                       -cifs  \
+                       -boeffla_wl_blocker  \
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu
