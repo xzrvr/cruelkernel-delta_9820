@@ -57,16 +57,27 @@ jobs:
                        model=${{ matrix.model }} \
                        name="cruel-HVJ5-v5.3_custom"  \
                        toolchain=$TOOLCHAIN      \
-                       +magisk=delta  \
-                       -force_dex_wqhd  \
-                       -sdfat  \
-                       -ntfs  \
-                       -cifs  \
-                       -boeffla_wl_blocker  \
-                       -nohardening  \
-                       -nodebug  \
-                       -morosound  \
-                       -wireguard  \
+                       +magisk=delta             \
+                       +nohardening              \
+                       +ttl                      \
+                       +wireguard                \
+                       +cifs                     \
+                       +sdfat                    \
+                       +ntfs                     \
+                       +force_dex_wqhd           \
+                       -morosound                \
+                       +boeffla_wl_blocker       \
+                       +dtb                      \
+                       +performance              \
+                       +tcp_cubic                \
+                       +tcp_westwood             \
+                       +io_fiops                 \
+                       +io_zen                   \
+                       +io_maple                 \
+                       +sched_userspace          \
+                       +usb_serial               \
+                       +mass_storage             \
+                       +300hz                    \
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu
