@@ -69,7 +69,8 @@ jobs:
                        -morosound  \
                        -force_dex_wqhd  \
                        -cifs  \
-                       -boeffla_wl_blocker  \
+                       -nohardening  \
+                       +boeffla_wl_blocker  \
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu
