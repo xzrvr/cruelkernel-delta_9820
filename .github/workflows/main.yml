@@ -68,8 +68,11 @@ jobs:
                        +boeffla_wl_blocker       \
                        +dtb                      \
                        +performance              \
+                       +tcp_htcp                 \
+                       +tcp_bbr                  \
                        +tcp_cubic                \
                        +tcp_westwood             \
+                       +io_sio                   \
                        +io_fiops                 \
                        +io_zen                   \
                        +io_maple                 \
